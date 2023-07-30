@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+    <link rel="icon" href="https://img.icons8.com/?size=512&id=13724&format=png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="login-form">
+      <h1 class="home-page-title">ChatRoom</h1>
+      <div class="container">
+        <input type="text" name="username" id="username" placeholder="Username" />
+        <button id="join-btn" type="submit">Join Chat</button>
+      </div>
+    </div>
+    <div class="chat-room">
+      <div class="header">
+        <h1>ChatRoom</h1>
+      </div>
+      <div class="body">
+        <div class="msg-container">
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="footer">
+          <input
+            type="text"
+            name="msg-input"
+            id="msg-input"
+            placeholder="Message"
+          />
+          <button id="send-btn" type="button"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

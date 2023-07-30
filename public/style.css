@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+    margin: 0;
+    padding: 0; 
+    background-color: #222831;
+    font-family: 'Poppins', sans-serif;
+    color: #EEEEEE;
+    cursor: default;
+}
+
+*{
+    transition: font-size 0.2s ease;
+}
+
+h1{
+    color: #00ADB5;
+    margin: 0;
+    font-size: xxx-large;
+    font-weight: 300;
+    transition: text-shadow .2s ease;
+}
+h1:hover{
+    text-shadow: 0px 0px 10px;
+    transition: text-shadow .2s ease;
+}
+.login-form{
+    display: flex;
+}
+
+.chat-room{
+    display: none;
+
+    height: 100vh;
+    width: 100%;
+
+    flex-direction: column;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.body{
+    /* border: 1px solid #00ADB5; */
+    width: 60%;
+    flex-grow: 1;
+    border-radius: 10px;
+    overflow: auto;
+    background-color: #393E46;
+}
+
+.msg-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+}
+
+.sent{
+    align-self: flex-end;
+    border-top-right-radius: 0px !important;
+}
+.recieved {
+    border-top-left-radius: 0px !important;
+}
+
+.msg{
+    width: fit-content;
+    padding: .5em;
+    border-radius: 10px;
+    max-width: 50%;
+    word-wrap: break-word;
+    box-shadow: 0px 2px 5px #00ADB5;
+    margin-bottom: 20px;
+    background-color: #222831;
+}
+
+.wrapper{
+    /* backdrop-filter: blur(10px); */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    /* border-top: 1px solid rgba(255, 255, 255, 0.5); */
+}
+
+.footer{
+    display: flex;
+    gap: 10px;
+    width: 60%;
+}
+input, button{
+    background-color: #222831;
+    transition: box-shadow .1s ease;
+    color: #00ADB5;
+}
+input{
+    border: 1px solid #393e46;
+    display: flex;
+    align-items: center;
+}
+button{
+    border: none;
+}
+#msg-input, #send-btn{
+    font-size: large;
+    border-radius: 5px;
+}
+
+#msg-input{
+    height: auto;
+    flex-grow: 1;
+    padding: 5px 10px;
+}
+
+#send-btn{
+    height: 100%;
+    padding: 5px 15px;
+    
+}
+button:hover{
+    box-shadow: 0px 0.6px 5px;
+    cursor: pointer;
+}
+
+input:hover{
+    box-shadow: 0px 0px 5px;
+}
+input:focus{
+    outline: none;
+    box-shadow: 0px 0.6px 10px;
+}
+
+.reciever{
+    text-align: end;
+}
+
+.name{
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #00ADB5;
+    cursor: pointer;
+}
+
+.joined-chat, .left-chat{
+    align-self: center;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: #00ADB5;
+    background: #222831;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50vh;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+#username, #join-btn{
+    font-size: 1.5rem;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+
+@media (width < 850px){
+    .footer, .body{
+        width: 75%;
+        transition: width 0.2s ease;
+    }
+}
+
+@media(width < 400px){
+    input{
+        width: 100%;
+    }
+    input::placeholder{
+        font-size: 14px !important;
+    }
+    
+    .footer, .body{
+        width: 99%;
+    }
+    .footer{
+        flex-direction: column;
+    }
+    .footer, .body, input{
+        transition: width 0.2s ease;
+    }
+    body, input, button{
+        font-size: 14px !important;
+    }
+    h1{
+        font-size: 32px;
+    }
+    body, input, button, h1{
+        transition: font-size 0.2s ease;
+    }
+    
+}
